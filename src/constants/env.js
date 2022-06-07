@@ -1,0 +1,8 @@
+export const API_KEY="AIzaSyAjpizsxsz18ZobR1RVQ_q6a8hY64rvC8o"
+export const AUTH_DOMAIN="chitchat-cb5ce.firebaseapp.com"
+export const DATABASE_URL=""
+export const PROJECT_ID="chitchat-cb5ce"
+export const STORAGE_BUCKET="chitchat-cb5ce.appspot.com"
+export const MESSAGING_SENDER_ID="599615533221"
+export const APP_ID="1:599615533221:web:f3ac8a4a492037bcee5d4c"
+export const MEASUREMENT_ID="G-PDZ0Q4BT36"
