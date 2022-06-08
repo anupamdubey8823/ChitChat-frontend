@@ -4,24 +4,22 @@ import { UserContext } from '../context/UserContext';
 
 export const PrivateRoute = ({ children }) => {
     const { user, redirect, setRedirect } = useContext(UserContext);
-    // if (!user) {
-    //     console.log("User not logged in");
-    //     return <Navigate to='/' />
-    // }
+
     useEffect(() => {
+      // This is for preventing unauthorised access of '/chats' protected route
       if (!user) {
         console.log(user);
-        // window.location = '/';
         setRedirect('/');
-        // window.location.reload();
-        // return homePage();
       }
     }, [redirect])
-    if (redirect === '/')
-    // function homePage() {
-        return <Navigate to='/' />
-    // }
-    
+
+    // This if block takes care of both logging out the user and taking to home page from ChatRoom, and if a user
+    // tries to access the protected '/chats' route without signing in.
+    // It is because each time 'redirect' changes, this component is re-rendered, and below logic is verified and 
+    // redirected if need be.
+    if (redirect === '/') {
+      return <Navigate to='/' />
+    }  
 
     return children;
 }

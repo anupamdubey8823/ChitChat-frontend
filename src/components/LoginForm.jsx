@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
-import { AuthContext } from '../context/AuthContext';
+import React, { useState } from 'react'
 import { signInWithGoogle } from '../services/firebase';
 
 export const LoginForm = () => {
 
-  const { isSignUp, setIsSignUp } = useContext(AuthContext);
+  const [isSignUp, setIsSignUp] = useState(false);
 
   const switchMode = () => {
     setIsSignUp((prevState) => !prevState);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { auth } from '../services/firebase';
 
-export const UserContext = createContext({user: null, redirect: null});
+export const UserContext = createContext({user: null});
 
 export default function(props) {
     const [user, setUser] = useState(null);

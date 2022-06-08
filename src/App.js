@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
-// import Notification from './assets/chat-svgrepo.svg';
 import UserContext from './context/UserContext';
+// import Notification from './assets/chat-svgrepo.svg';
 
 import { Auth, ChatRoom, PrivateRoute } from './components';
 
